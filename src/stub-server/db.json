@@ -1,0 +1,32 @@
+{
+  "books": [
+    {
+      "name": "Refactoring",
+      "id": 1,
+      "description": "Martin Fowler's Refactoring defined core ideas and techniques ...",
+      "reviews": [
+        {
+          "id": 1,
+          "bookId": 1,
+          "name": "Juntao Qiu",
+          "content": "Excellent work!"
+        }
+      ]
+    },
+    {
+      "name": "Domain-driven design",
+      "id": 2,
+      "description": "Explains how to incorporate effective domain modeling into the software development process."
+    },
+    {
+      "name": "Building Microservices",
+      "id": 3,
+      "description": "Author Sam Newman provides you with a firm grounding in the concepts while ..."
+    },
+    {
+      "name": "Acceptance Test Driven Development with React",
+      "id": 4,
+      "description": "This book describes how to apply the Acceptance Test Driven Development ..."
+    }
+  ]
+}

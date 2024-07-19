@@ -1,5 +1,34 @@
 /* eslint-disable jest/valid-expect */
 describe("Bookish application", function () {
+  beforeEach(() => console.log("connection setup"));
+
+  beforeEach(() => {
+    cy.visit("http://localhost:3000/");
+    cy.intercept("GET", "http://localhost:8080/books", [
+      { name: "Refactoring", id: 1 },
+      { name: "Domain-driven design", id: 2 },
+    ]);
+
+    // return axios.delete("http://localhost:8080/books?_cleanup=true");
+  });
+
+  // afterEach(() => {
+  //   return axios.delete("http://localhost:8080/books?_cleanup=true");
+  // });
+
+  // beforeEach(() => {
+  //   const books = [
+  //     { name: "Refactoring", id: 1 },
+  //     { name: "Domain-driven design", id: 2 },
+  //   ];
+
+  //   return books.map((item) =>
+  //     axios.post("http://localhost:8080/books", item, {
+  //       headers: { "Content-Type": "application/json" },
+  //     })
+  //   );
+  // });
+
   it("Visits the bookish", function () {
     cy.visit("http://localhost:3000/");
     cy.get('h2[data-test="heading"]').contains("Bookish");
