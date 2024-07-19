@@ -7,8 +7,12 @@ function App() {
         Bookish
       </Typography>
       <div data-test="book-list">
-        <div className="book-item"></div>
-        <div className="book-item"></div>
+        <div className="book-item">
+          <h2 className="title">Refactoring</h2>
+        </div>
+        <div className="book-item">
+          <h2 className="title">Domain-driven design</h2>
+        </div>
       </div>
     </>
   );
