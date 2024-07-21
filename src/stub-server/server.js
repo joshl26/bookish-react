@@ -17,7 +17,7 @@ server.use((req, res, next) => {
 server.use(
   cors({
     origin: true,
-    credentials: false,
+    credentials: true,
     preflightContinue: false,
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   })
