@@ -6,8 +6,6 @@ const useBooks = () => {
   const [books, setBooks] = useState<Book[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
-
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [term, setTerm] = useState<string>("");
 
   useEffect(() => {

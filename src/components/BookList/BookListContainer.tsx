@@ -14,16 +14,17 @@ const BookListContainer = () => {
     return <p>Error...</p>;
   }
   return (
-    <TextField
-      label="Search"
-      value={term}
-      data-test="search"
-      onChange={(e) => setTerm(e.target.value)}
-      margin="normal"
-      variant="outlined"
-    >
+    <>
+      <TextField
+        label="Search"
+        value={term}
+        data-test="search"
+        onChange={(e) => setTerm(e.target.value)}
+        margin="normal"
+        variant="outlined"
+      />
       <BookList books={books} />
-    </TextField>
+    </>
   );
 };
 

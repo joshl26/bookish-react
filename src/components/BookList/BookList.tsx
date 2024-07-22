@@ -20,7 +20,12 @@ const BookList = ({ books }: { books: Book[] }) => {
             <Card>
               <CardActionArea>
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
+                  <Typography
+                    gutterBottom
+                    variant="h5"
+                    component="h2"
+                    className="title"
+                  >
                     {book.name}
                   </Typography>
                   <Typography
@@ -34,7 +39,7 @@ const BookList = ({ books }: { books: Book[] }) => {
               </CardActionArea>
               <CardActions>
                 <Button size="small" color="primary">
-                  <Link to={`/books/${book.id}`}>View</Link>
+                  <Link to={`/books/${book.id}`}>View Details</Link>
                 </Button>
               </CardActions>
             </Card>
