@@ -1,5 +1,8 @@
 import React from "react";
 import { TextField } from "@mui/material";
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "store/store";
+import { fetchBooks, setTerm } from "slices/bookListSlice";
 
 const SearchBox = ({
   term,
@@ -8,19 +11,21 @@ const SearchBox = ({
   term: string;
   onSearch: (term: string) => void;
 }) => {
+  const dispatch = useDispatch<AppDispatch>();
+
   const performSearch = (event: any) => {
     const value = event.target.value;
 
     if (value && value.trim().length === 0) {
       return;
     }
-    onSearch(value);
+    dispatch(setTerm(value));
+    dispatch(fetchBooks(value));
   };
 
   return (
     <TextField
       label="Search"
-      value={term}
       data-test="search"
       onChange={performSearch}
       margin="normal"
