@@ -2,6 +2,10 @@
   "books": [
     { "name": "Refactoring", "id": 1 },
     { "name": "Domain-driven design", "id": 2 },
-    { "name": "Building Microservices", "id": 3 }
+    {
+      "name": "Building Microservices",
+      "id": 3,
+      "description": "Martin Fowler's Refactoring defined core ideas and techniques that hundreds of thousands of developers have used to improve their software."
+    }
   ]
 }

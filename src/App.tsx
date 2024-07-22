@@ -1,7 +1,7 @@
 import React from "react";
 import { Typography } from "@mui/material";
-import BookListContainer from "components/BookListContainer";
-import BookDetailContainer from "components/BookDetailContainer";
+import BookListContainer from "components/BookList/BookListContainer";
+import BookDetailContainer from "components/BookDetail/BookDetailContainer";
 
 import { Routes, Route } from "react-router";
 
