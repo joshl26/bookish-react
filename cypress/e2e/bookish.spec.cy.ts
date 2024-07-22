@@ -10,10 +10,10 @@ describe("Bookish application", function () {
   //     method: "DELETE",
   //     url: "http://localhost:8080/books",
   //   });
-  //   // return axios.delete("http://localhost:8080/books?_cleanup=true");
+  //   return axios.delete("http://localhost:8080/books?_cleanup=true");
   // });
 
-  // afterEach(() => {
+  // beforeEach(() => {
   //   return axios.delete("http://localhost:8080/books?_cleanup=true");
   // });
 

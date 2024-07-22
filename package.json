@@ -52,5 +52,10 @@
   "devDependencies": {
     "cypress": "^13.13.1",
     "json-server": "^1.0.0-beta.1"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "axios": "axios/dist/node/axios.cjs"
+    }
   }
 }
