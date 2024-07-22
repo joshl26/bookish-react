@@ -1,7 +1,8 @@
 import React from "react";
-import { render, screen, within } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 
 import BookList from "./BookList";
+import { renderWithRouter } from "stub-server/renderWithRouter";
 
 describe("Booklist", () => {
   it("render books", async () => {
@@ -11,7 +12,7 @@ describe("Booklist", () => {
         { name: "Domain-driven design", id: 2 },
       ],
     };
-    render(<BookList {...props} />);
+    renderWithRouter(<BookList {...props} />);
 
     const headings = await screen.findAllByRole("heading");
 
