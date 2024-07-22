@@ -1,23 +1,20 @@
 import { Typography } from "@mui/material";
-import BookList from "./BookList";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import { Book } from "./types";
+import BookListContainer from "components/BookListContainer";
+import BookDetailContainer from "components/BookDetailContainer";
+
+import { Routes, Route } from "react-router";
 
 function App() {
-  const [books, setBooks] = useState<Book[]>([]);
-
-  useEffect(() => {
-    axios.get("http://localhost:8080/books").then((res) => setBooks(res.data));
-  }, []);
-
   return (
-    <>
+    <div>
       <Typography variant="h2" component="h2" data-test="heading">
         Bookish
       </Typography>
-      <BookList books={books} />
-    </>
+      <Routes>
+        <Route path="/" element={<BookListContainer />} />
+        <Route path="/books/:id" element={<BookDetailContainer />} />
+      </Routes>
+    </div>
   );
 }
 
