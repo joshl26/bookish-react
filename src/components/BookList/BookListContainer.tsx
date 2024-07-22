@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BookList from "./BookList";
 import useBooks from "../../hooks/useBooks";
-import { TextField } from "@mui/material";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "store/store";
+import { fetchBooks } from "slices/bookListSlice";
+import SearchBox from "components/SearchBox";
 
 const BookListContainer = () => {
-  const { loading, error, books, setTerm, term } = useBooks();
+  const { loading, error, setTerm, term } = useBooks();
+
+  const { books } = useSelector((state: RootState) => ({
+    books: state.list.books,
+  }));
+
+  const dispatch = useDispatch<AppDispatch>();
+
+  useEffect(() => {
+    dispatch(fetchBooks(""));
+  }, [dispatch]);
 
   if (loading) {
     return <p>Loading...</p>;
@@ -15,14 +28,7 @@ const BookListContainer = () => {
   }
   return (
     <>
-      <TextField
-        label="Search"
-        value={term}
-        data-test="search"
-        onChange={(e) => setTerm(e.target.value)}
-        margin="normal"
-        variant="outlined"
-      />
+      <SearchBox term={term} onSearch={setTerm} />
       <BookList books={books} />
     </>
   );
