@@ -1,6 +1,20 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-import { Book, initialState } from "types";
+import { Book } from "types";
+
+export type AppStateType = {
+  books: Book[];
+  loading: boolean;
+  error: boolean;
+  term: string;
+};
+
+export const initialState: AppStateType = {
+  books: [],
+  loading: false,
+  error: false,
+  term: "",
+};
 
 export const bookListSlice = createSlice({
   name: "books",
