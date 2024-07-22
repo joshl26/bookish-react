@@ -29,7 +29,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "e2e": "cypress run",
-    "stub-server": "json-server ./stub-server/db.json -p 8080"
+    "stub-server": "json-server ./src/stub-server/books.json -p 8080"
   },
   "eslintConfig": {
     "extends": [
