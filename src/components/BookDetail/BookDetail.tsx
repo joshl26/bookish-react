@@ -1,3 +1,4 @@
+import ReviewList from "components/ReviewList/ReviewList";
 import React from "react";
 import { Book } from "types";
 
@@ -12,6 +13,7 @@ const BookDetail = ({ book }: { book: Book }) => {
       <p className="book-description" data-testid="book-description">
         {getDescriptionFor(book)}
       </p>
+      {book.reviews && <ReviewList reviews={book.reviews} />}
     </div>
   );
 };

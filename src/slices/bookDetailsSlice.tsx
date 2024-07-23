@@ -12,6 +12,7 @@ const initialState: BookDetailType = {
   book: {
     id: 0,
     name: "",
+    reviews: [],
   },
   loading: false,
   error: false,

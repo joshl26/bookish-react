@@ -8,7 +8,16 @@
     {
       "name": "Domain-driven design",
       "id": 2,
-      "description": "Explains how to incorporate effective domain modeling into the software development process."
+      "description": "Explains how to incorporate effective domain modeling into the software development process.",
+      "reviews": [
+        {
+          "id": 1,
+          "bookId": 1,
+          "name": "Juntao",
+          "date": "2023/06/21",
+          "content": "Excellent work, really impressed by your efforts"
+        }
+      ]
     },
     {
       "name": "Building Microservices",
