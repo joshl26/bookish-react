@@ -7,7 +7,6 @@ type Review = {
 };
 
 const ReviewList = ({ reviews }: { reviews: Review[] }) => {
-  console.log(reviews);
   return (
     <div data-testid="reviews-container">
       {reviews.map((review) => (
